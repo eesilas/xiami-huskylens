@@ -1,3 +1,6 @@
+xiamiBoard.initXiaMiBoard()
+xiamiBoard.OLEDclear()
+xiamiBoard.setBrightness(90)
 huskylens.initI2c()
 huskylens.initMode(protocolAlgorithm.ALGORITHM_TAG_RECOGNITION)
 huskylens.writeOSD("DFRobot", 150, 30)
