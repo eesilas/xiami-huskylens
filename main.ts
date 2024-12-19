@@ -1,3 +1,4 @@
+basic.showIcon(IconNames.SmallHeart)
 xiamiBoard.initXiaMiBoard()
 xiamiBoard.OLEDclear()
 xiamiBoard.setBrightness(90)
@@ -6,8 +7,8 @@ huskylens.initMode(protocolAlgorithm.ALGORITHM_TAG_RECOGNITION)
 huskylens.writeOSD("DFRobot", 150, 30)
 huskylens.request()
 basic.forever(function () {
+    huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-        huskylens.request()
         if (huskylens.isAppear(7, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
             xiamiBoard.setIndexColor(0, 0xff0000)
             xiamiBoard.setIndexColor(1, 0xff0000)
