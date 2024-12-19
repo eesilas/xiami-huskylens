@@ -17,13 +17,14 @@ basic.forever(function () {
         } else if (huskylens.isAppear(3, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
             xiamiBoard.setIndexColor(0, 0x00ffff)
             xiamiBoard.setIndexColor(1, 0x00ffff)
-        } else if (huskylens.isAppear(3, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-        	
-        } else {
+        } else if (huskylens.isAppear(2, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
             xiamiBoard.setIndexColor(0, 0xffff00)
             xiamiBoard.setIndexColor(1, 0xffff00)
+        } else {
+            xiamiBoard.setIndexColor(0, 0x7f00ff)
+            xiamiBoard.setIndexColor(1, 0x7f00ff)
         }
     } else {
-        basic.showIcon(IconNames.Sad)
+        basic.showIcon(IconNames.Butterfly)
     }
 })
